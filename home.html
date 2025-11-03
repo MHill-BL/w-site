@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matthew & Natsumi — Wedding</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --mint:#BFCFBB;
+    --mint-deep:#a6bba0;
+    --mint-mid:#cfe0cc;
+    --mint-light:#eaf3e6;
+    --sage:#4f6a54;
+    --ink:#2a2928;
+    --muted:#5e5b58;
+    --card:rgba(255,255,255,.9);
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+  }
+
+  html,body {
+    margin:0;
+    font-family: Inter, system-ui, sans-serif;
+    color:var(--ink);
+    line-height:1.6;
+    background: linear-gradient(180deg, var(--mint-deep), var(--mint), var(--mint-mid), var(--mint-light));
+    scroll-behavior:smooth;
+  }
+
+  *{box-sizing:border-box;}
+  a { color: var(--sage); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+
+  .container { max-width:1080px; margin:0 auto; padding:0 20px; }
+
+  /* NAV */
+  .nav {
+    position:sticky; top:0; z-index:10;
+    backdrop-filter:blur(8px);
+    background:rgba(255,255,255,0.4);
+    border-bottom:1px solid rgba(255,255,255,0.6);
+  }
+  .nav-inner { display:flex; justify-content:space-between; align-items:center; height:64px; }
+  .brand { font-family:'Playfair Display',serif; font-weight:700; color:var(--sage); }
+  .menu a { margin-left:20px; font-weight:600; color:var(--ink); }
+
+  /* BASIC SECTION STACKING */
+  section {
+    padding:80px 0;
+    position:relative;
+  }
+
+  /* Equal section spacing */
+  section + section { margin-top:-40px; } /* reduces gap between sections */
+
+  /* CARD */
+  .card {
+    background:var(--card);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    border:1px solid rgba(255,255,255,0.7);
+    padding:24px;
+    margin-bottom:40px;
+  }
+
+  /* HEADINGS */
+  h2.section-title {
+    font-family:'Playfair Display',serif;
+    font-size:clamp(24px,4vw,36px);
+    color:var(--sage);
+    margin-top:0;
+  }
+
+  .muted { color:var(--muted); }
+
+  /* GRID LAYOUTS */
+  .grid { display:grid; gap:24px; }
+  @media(min-width:880px){
+    .grid-2{grid-template-columns:1fr 1fr;}
+    .grid-3{grid-template-columns:repeat(3,1fr);}
+  }
+
+  /* GALLERY */
+  .gallery img {
+    width:100%;
+    height:auto;
+    border-radius:14px;
+    display:block;
+    border:1px solid rgba(255,255,255,0.8);
+  }
+
+  /* BUTTON */
+  .btn {
+    display:inline-block;
+    background:#fff;
+    color:var(--sage);
+    padding:12px 24px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.7);
+    font-weight:600;
+    margin-top:16px;
+    text-decoration:none;
+    box-shadow:0 6px 14px rgba(0,0,0,0.08);
+  }
+  .btn:hover {
+    background:#f4faf1;
+    transform:translateY(-2px);
+  }
+
+  /* HERO */
+  .hero {
+    text-align:center;
+    padding:140px 0 100px;
+  }
+  .script {
+    font-family:'Great Vibes',cursive;
+    font-size:clamp(84px,14vw,148px);
+    color:#fff;
+    text-shadow:0 10px 30px rgba(0,0,0,0.2);
+    margin:0;
+    opacity:0;
+    transform:translateY(20px);
+    animation:fadeUp 1.2s ease forwards;
+  }
+  .jp {
+    font-family:'Playfair Display',serif;
+    color:#fff;
+    font-weight:700;
+    margin-top:10px;
+    opacity:0;
+    animation:fadeUp 1.2s ease forwards .3s;
+  }
+  @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+  table {
+    width:100%;
+    border-collapse: collapse;
+    margin-top:8px;
+  }
+  th, td {
+    text-align:left;
+    padding:6px 8px;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+  }
+  th { background:rgba(255,255,255,0.5); color:var(--sage); }
+  td { font-size:14px; }
+
+  footer {
+    text-align:center;
+    padding:60px 0;
+    color:var(--sage);
+    font-size:14px;
+  }
+</style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Matthew & Natsumi</div>
+      <nav class="menu">
+        <a href="#home">Home</a>
+        <a href="#story">Our Story</a>
+        <a href="#details">Details</a>
+        <a href="#menu">Menu</a>
+        <a href="#rsvp">RSVP</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1 class="script">Matt &amp; Nat</h1>
+      <div class="jp">マシューとナツミの結婚式</div>
+      <p style="color:white; font-weight:500; margin-top:8px;">2 May 2026 · St Mary’s Church · Tadcaster</p>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section id="story">
+    <div class="container">
+      <div class="card">
+        <h2 class="section-title">Our Story</h2>
+        <p>Meeting in York in May 2022, Matt and Nat’s story began at the Cross Keys pub.</p>
+        <div class="gallery"><img src="images/2.jpg" alt="Matt and Nat at the Cross Keys Pub"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section id="details">
+    <div class="container grid grid-2">
+      <div class="card">
+        <h2 class="section-title">Ceremony — St Mary’s Church</h2>
+        <div class="gallery"><img src="images/4.png" alt="Church photo"></div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Reception — Riley-Smith Hall</h2>
+        <div class="gallery"><img src="images/3.jpg" alt="Reception photo"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <h2 class="section-title">Getting There</h2>
+        <p>Both venues are a short walk apart in central Tadcaster. Main car park:
+          <a href="https://maps.app.goo.gl/TvFigj4JqzNfeFnR9" target="_blank">Central Area Car Park</a> (Free!)
+        </p>
+
+        <div class="grid grid-2">
+          <div>
+            <h4>Leeds → Tadcaster (Arrive before 12:30)</h4>
+            <table>
+              <thead><tr><th>Depart Leeds</th><th>Arrive</th><th>Bus</th></tr></thead>
+              <tbody>
+                <tr><td>10:00</td><td>~11:00</td><td>840/843</td></tr>
+                <tr><td>10:30</td><td>~11:30</td><td>840/843</td></tr>
+                <tr><td>11:30</td><td>~12:25</td><td>840/843</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h4>Tadcaster → Leeds (Evening)</h4>
+            <table>
+              <thead><tr><th>Depart</th><th>Arrive</th><th>Bus</th></tr></thead>
+              <tbody>
+                <tr><td>21:17</td><td>~22:15</td><td>840/843</td></tr>
+                <tr><td>22:07</td><td>~23:05</td><td>840/843</td></tr>
+                <tr><td>22:57</td><td>~23:55</td><td>840/843</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div>
+            <h4>York → Tadcaster (Arrive before 12:30)</h4>
+            <table>
+              <thead><tr><th>Depart York</th><th>Arrive</th><th>Bus</th></tr></thead>
+              <tbody>
+                <tr><td>10:45</td><td>~11:10</td><td>840/843</td></tr>
+                <tr><td>11:15</td><td>~11:40</td><td>840/843</td></tr>
+                <tr><td>12:00</td><td>~12:25</td><td>840/843</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h4>Tadcaster → York (Evening)</h4>
+            <table>
+              <thead><tr><th>Depart</th><th>Arrive</th><th>Bus</th></tr></thead>
+              <tbody>
+                <tr><td>20:35</td><td>~21:00</td><td>840/843</td></tr>
+                <tr><td>21:15</td><td>~21:40</td><td>840/843</td></tr>
+                <tr><td>22:05</td><td>~22:30</td><td>840/843</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <p class="muted">Official timetable: <a href="https://www.transdevbus.co.uk/media/ni0b4ocg/240916-coastliner-web-1.pdf" target="_blank">Coastliner 840/843 PDF</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="container">
+      <div class="card">
+        <h2 class="section-title">Wedding Breakfast — Thai Buffet</h2>
+        <p class="muted" style="text-align:center;">Chef Leach Napaporn</p>
+        <p class="muted">A relaxed Thai buffet to share and enjoy — choose from two starters, two curries, one rice, and one stir-fry, followed by a fruit-cutting ceremony.</p>
+        <div class="grid grid-3">
+          <div>
+            <h3 style="color:var(--sage);">Starters</h3>
+            <ul><li>Starter 1 — <em>[Dish name]</em></li><li>Starter 2 — <em>[Dish name]</em></li></ul>
+          </div>
+          <div>
+            <h3 style="color:var(--sage);">Curries</h3>
+            <ul><li>Curry 1 — <em>[Dish name]</em></li><li>Curry 2 — <em>[Dish name]</em></li></ul>
+          </div>
+          <div>
+            <h3 style="color:var(--sage);">Rice &amp; Stir-fry</h3>
+            <ul><li>Rice — <em>[Dish name]</em></li><li>Stir-fry — <em>[Dish name]</em></li></ul>
+          </div>
+        </div>
+        <h3 style="color:var(--sage); margin-top:12px;">Traditional Thai Fruit Carving</h3>
+        <ul><li>Fruit-cutting ceremony</li></ul>
+        <p class="muted">🌱 Vegetarian dishes available — please let us know any dietary needs.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title">Evening Pizza — Meanwood Pizza</h2>
+        <p class="muted">Handmade pizzas served later in the evening.</p>
+        <ul>
+          <li>Margherita</li>
+          <li>Japanese-inspired pizza</li>
+          <li>British-inspired pizza</li>
+          <li>Chef’s special (TBD)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp">
+    <div class="container">
+      <div class="card" style="text-align:center;">
+        <h2 class="section-title">RSVP</h2>
+        <p>Google Form coming soon. Please check back later.</p>
+        <a href="#" class="btn">RSVP</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Matthew &amp; Natsumi — 2 May 2026 · Tadcaster
+  </footer>
+</body>
+</html>
