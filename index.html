@@ -133,7 +133,7 @@
       transform:translateY(-2px);
     }
 
-    /* HERO */
+    /* Header image */
     .hero {
       text-align:center;
       padding:80px 0 30px;     /* was 140px 0 100px → reduced gaps */
@@ -198,7 +198,7 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- Header Image -->
   <section id="home" class="hero">
     <div class="container">
       <div class="script">Matt &amp; Nat</div>
@@ -218,19 +218,109 @@
     </div>
   </section>
 
-  <!-- DETAILS (smaller height) -->
+  <!-- Venues DETAILS  -->
   <section id="details">
-    <div class="container grid grid-2">
-      <div class="card reveal">
-        <h2 class="section-title">Ceremony<br>St Mary’s Church</h2>
-        <div class="gallery"><img src="images/4.png" alt="Church photo"></div>
-      </div>
-      <div class="card reveal">
-        <h2 class="section-title">Reception<br>Riley-Smith Hall</h2>
-        <div class="gallery"><img src="images/3.jpg" alt="Reception photo"></div>
+  <div class="container grid grid-2">
+    <div class="card reveal">
+      <h2 class="section-title">Ceremony<br>St Mary’s Church</h2>
+      <div class="gallery">
+        <a href="https://www.tadcasterbenefice.org/st-mary-s-church-tadcaster-1" target="_blank" rel="noopener">
+          <img src="images/4.png" alt="Church photo" style="width:100%; height:350px; object-fit:cover; border-radius:12px;">
+        </a>
       </div>
     </div>
-  </section>
+    <div class="card reveal">
+      <h2 class="section-title">Reception<br>Riley-Smith Hall</h2>
+      <div class="gallery">
+        <a href="https://rileysmithhall.org.uk/" target="_blank" rel="noopener">
+          <img src="images/3.jpg" alt="Reception photo" style="width:100%; height:350px; object-fit:cover; border-radius:12px;">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timetable / Getting There -->
+<section id="timetable">
+  <div class="container">
+    <div class="card reveal" style="margin-top:22px;">
+      <h2 class="section-title">Getting There</h2>
+      <p>The venues are a short walk apart in central Tadcaster. Main car park: 
+        <a target="_blank" rel="noreferrer noopener" href="https://maps.app.goo.gl/TvFigj4JqzNfeFnR9">Central Area Car Park</a>.
+      </p>
+      <h3 style="margin: 18px 0 8px;">Coastliner (Saturday examples)</h3>
+      <div class="grid grid-2">
+        <div>
+          <h4 class="muted" style="margin:6px 0;">Leeds → Tadcaster</h4>
+          <table>
+            <thead><tr><th>Depart Leeds</th><th>Arrive (approx)</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>11:40</td><td>~12:40</td><td>Coastliner 840/843</td></tr>
+              <tr><td>12:10</td><td>~13:10</td><td>Coastliner 840/843</td></tr>
+              <tr><td>12:30</td><td>~13:30</td><td>Coastliner 840/843</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h4 class="muted" style="margin:6px 0;">Tadcaster → Leeds (Evening)</h4>
+          <table>
+            <thead><tr><th>Depart Tadcaster</th><th>Arrive (approx)</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>21:17</td><td>~22:15</td><td>Last buses</td></tr>
+              <tr><td>22:07</td><td>~23:05</td><td>Last buses</td></tr>
+              <tr><td>22:57</td><td>~23:55</td><td>Last buses</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="grid grid-2" style="margin-top:16px;">
+        <div>
+          <h4 class="muted" style="margin:6px 0;">York → Tadcaster</h4>
+          <table>
+            <thead><tr><th>Depart York</th><th>Arrive (approx)</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>10:45</td><td>~11:10</td><td>Coastliner</td></tr>
+              <tr><td>13:25</td><td>~13:50</td><td>Coastliner</td></tr>
+              <tr><td>16:05</td><td>~16:30</td><td>Coastliner</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h4 class="muted" style="margin:6px 0;">Tadcaster → York</h4>
+          <table>
+            <thead><tr><th>Depart Tadcaster</th><th>Arrive (approx)</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>15:05</td><td>~15:30</td><td>Return</td></tr>
+              <tr><td>16:43</td><td>~17:10</td><td>Return</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:10px;">
+        Official timetable (PDF): 
+        <a target="_blank" rel="noreferrer noopener" href="https://www.transdevbus.co.uk/media/ni0b4ocg/240916-coastliner-web-1.pdf">Coastliner 840/843</a>. 
+        Times can change — please check before you travel.
+      </p>
+    </div>
+    <div class="grid grid-2" style="margin-top:22px;">
+      <div class="card">
+        <h2 class="section-title">Closest Hotel</h2>
+        <p><strong>The Jackdaw Bar, Food & B&B:</strong>0.2 miles / 1 minute drive</p>
+        <p><strong>Hazlewood Castle & Spa</strong>3.3 miles / 7 minutes drive</p>
+        <p><strong>Travelodge York Tadcaster:</strong>4.4 miles / 8 minutes drive.</p>
+        <p><strong>Premier Inn York South West Hotel:</strong>5.2 miles / 10 minutes drive</p>
+      </div>
+     <div class="card">
+        <h2 class="section-title">Local Taxis</h2>
+          <p><strong>Calcaria Taxis &amp; Minibuses</strong> — <a href="tel:+441937835205">01937 835205</a></p>
+          <p><strong>Taxis Tadcaster (DDD Private Hire)</strong> — <a href="tel:+447795086754">07795 086754</a></p>
+          <p><strong>Bridge Private Hire</strong> — <a href="tel:+441937834126">01937 834126</a></p>
+          <p><strong>Deighton Cars (Wetherby)</strong> — <a href="tel:+441937589192">01937 589192</a></p>
+          <p><strong>Veezu</strong> — book via the <a href="https://www.veezu.co.uk" target="_blank">Veezu app</a></p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- MENU -->
 <section id="menu">
@@ -239,7 +329,6 @@
       <h2 class="section-title">Wedding Breakfast — Thai Buffet</h2>
       <p class="muted" style="text-align:center;">Chef Leach Napaporn</p>
       <p class="muted">A relaxed Thai buffet to share and enjoy, with starters, curries, rice, and stir-fry, followed by a fruit-cutting ceremony.</p>
-
       <div class="grid grid-3">
         <div>
           <h3>Starters</h3>
@@ -254,7 +343,6 @@
           <ul><li>Rice</li><li>Stir-fry</li></ul>
         </div>
       </div>
-
       <p class="muted" style="margin-top:12px;">🌱 Vegetarian dishes available — please let us know any dietary needs.</p>
     </div>
   </div>
@@ -276,8 +364,7 @@
   </div>
 </section>
 
-
-  <!-- RSVP -->
+<!-- RSVP -->
   <section id="rsvp">
     <div class="container">
       <div class="card reveal" style="text-align:center;">
@@ -288,8 +375,10 @@
     </div>
   </section>
 
+<!-- Footer -->
   <footer>
     Matthew &amp; Natsumi — 2 May 2026 · Tadcaster
   </footer>
+
 </body>
 </html>
