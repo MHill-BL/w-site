@@ -54,6 +54,43 @@
     .gallery img,.venue-img{width:100%;border-radius:14px;display:block;border:1px solid rgba(255,255,255,0.8);}
     .venue-img{height:350px;object-fit:cover;border-radius:12px;}
 
+    /* SLIDESHOW (Our Story) */
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: var(--shadow);
+      margin-top: 20px;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center; 
+    }
+
+    .slideshow .slide:not(:first-child) img {
+      object-position: center 25%;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
     /* BUTTON */
     .btn{display:inline-block;background:#fff;color:var(--sage);padding:12px 24px;border-radius:10px;border:1px solid rgba(255,255,255,0.7);font-weight:600;margin-top:16px;box-shadow:0 6px 14px rgba(0,0,0,0.08);}
     .btn:hover{background:#f4faf1;transform:translateY(-2px);}
@@ -62,7 +99,7 @@
     .hero{text-align:center;padding:80px 0 30px;}
     .script{font-family:'Great Vibes',cursive;font-size:clamp(84px,14vw,148px);color:#fff;text-shadow:0 10px 30px rgba(0,0,0,0.2);margin:0;opacity:0;transform:translateY(20px);animation:fadeUp 1.2s ease forwards;}
     .jp{font-family:'Playfair Display',serif;color:#fff;font-weight:700;margin-top:10px;opacity:0;animation:fadeUp 1.2s ease forwards .3s;}
-    @keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
+    @keyframes fadeUp{to{opacity:1;transform:translateY(0);} }
 
     /* TABLE */
     table{width:100%;border-collapse:collapse;margin-top:8px;}
@@ -103,8 +140,12 @@
     <div class="container">
       <div class="card reveal">
         <h2 class="section-title">Our Story</h2>
-        <p>Meeting in York in May 2022, Matt and Nat’s story began at the Cross Keys pub.</p>
-        <div class="gallery"><img src="images/2.jpg" alt="Matt and Nat at the Cross Keys Pub"></div>
+        <p>Our story began in 2022, when fate (and a good pint) brought us together at the Cross Keys pub in York. Nat was studying at the University of York, and Matt was working at the British Library. What started as a friendly conversation quickly turned into something special, filled with laughter, late-night chats, and countless train rides between cities. In 2025, Nat made the move to the UK so we could finally start our life together in the same place, no more airport goodbyes! Now, surrounded by our favorite people, we can’t wait to celebrate the next chapter of our story.</p>
+        <div class="slideshow">
+          <div class="slide active"><img src="images/5.jpg" alt="Matt and Nat"></div>
+          <div class="slide"><img src="images/2.jpg" alt="York Minister"></div>
+          <div class="slide"><img src="images/1.jpg" alt="Cross Keys Pub"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -263,9 +304,9 @@
         <p class="muted" style="text-align:center;">Chef Leach Napaporn</p>
         <p class="muted">A relaxed Thai buffet with starters, curries, rice, and stir-fry, followed by a fruit-cutting ceremony.</p>
         <div class="grid grid-3">
-          <div><ul><h3>Starters</h3>Starter 1<br>Starter 2</ul></div>
-          <div><ul><h3>Curries</h3>Curry 1<br>Curry 2</ul></div>
-          <div><ul><h3>Rice &amp; Stir-fry</h3>Rice<br>Stir-fry</ul></div>
+          <div><ul><h3>Starters</h3>Spring Rolls<br>Gai Satay</ul></div>
+          <div><ul><h3>Curries</h3>Gaeny Klew Wann<br>Gaeny Panang</ul></div>
+          <div><ul><h3>Rice, Noodles & Stir-fry</h3>Khao Pud Khai<br>Pad Thai Jay<br>King Pad Broccoli</ul></div>
         </div>
         <p class="muted mt-12">🌱 Vegetarian dishes available, please note any dietary needs.</p>
       </div>
@@ -279,7 +320,7 @@
         <h2 class="section-title">Evening Pizza</h2>
         <p class="muted">Handmade pizzas served later in the evening by Meanwood Pizza.</p>
         <ul style="list-style:none;padding:0;margin:0;">
-          <li>Margherita</li><li>Japanese-inspired</li><li>British-inspired</li><li>Chef’s special (TBD)</li>
+          <li>Margherita</li><li>Teriyaki Chicken Pizza 🇯🇵</li><li>Roast Dinner Pizza 🇬🇧</li><li>Chef’s special (TBD)</li>
         </ul>
       </div>
     </div>
@@ -308,6 +349,19 @@
     </div>
   </section>
 
+  <!-- JS for slideshow -->
+  <script>
+    const slides = document.querySelectorAll('.slideshow .slide');
+    let currentSlide = 0;
+
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 8000);
+  </script>
+
+  <!-- Existing MetaMask script -->
   <script>
     const tokenAddress="0xYOUR_TOKEN_CONTRACT_ADDRESS",tokenSymbol="MNC",tokenDecimals=18,tokenImage="https://yourwebsite.com/images/mattnatcoin.png";
     document.getElementById('addTokenButton').addEventListener('click',async()=>{
@@ -324,5 +378,3 @@
   <footer>Matthew &amp; Natsumi · 2 May 2026 · Tadcaster</footer>
 </body>
 </html>
-
-
