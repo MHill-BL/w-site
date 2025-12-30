@@ -124,10 +124,10 @@
       <div class="brand">Matthew & Natsumi</div>
       <nav class="menu">
         <a href="#home">Home</a>
+        <a href="#rsvp">RSVP</a>
         <a href="#story">Our Story</a>
         <a href="#details">Details</a>
         <a href="#menu">Menu</a>
-        <a href="#rsvp">RSVP</a>
       </nav>
     </div>
   </header>
@@ -137,7 +137,18 @@
     <div class="container">
       <div class="script">Matt &amp; Nat</div>
       <div class="jp">マシューとナツミの結婚式</div>
-      <p class="muted" style="margin-top:8px;color:#fff;opacity:.92;">2 May 2026 · St Mary’s Church · Tadcaster</p>
+      <p class="muted" style="margin-top:8px;color:#fff;opacity:.92;">13:00 · 2 May 2026 · St Mary’s Church · Tadcaster</p>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp">
+    <div class="container">
+      <div class="card reveal" style="text-align:center;">
+        <h2 class="section-title">RSVP</h2>
+          <p>Please confirm your attendance below by 31 March 2026.</p>
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSf_hd7aH9XyeTnvtwkff8ezNMyvF1uhehulta7Q9SPk6Qpr3g/viewform?usp=dialog">RSVP</a>
+      </div>
     </div>
   </section>
 
@@ -311,7 +322,7 @@
         <p class="muted">A relaxed Thai buffet with starters, curries, rice, and stir-fry, followed by a fruit-cutting ceremony.</p>
         <div class="grid grid-3">
           <div><ul><h3>Starters</h3>Spring Rolls<br>Gai Satay</ul></div>
-          <div><ul><h3>Curries</h3>Gaeny Klew Wann<br>Gaeny Panang</ul></div>
+          <div><ul><h3>Curries</h3>Gaeny Klew Wann (Green)<br>Gaeny Panang (Red)</ul></div>
           <div><ul><h3>Rice & Noodles</h3>Khao Pud Khai<br>Pad Thai Jay<br>King Pad Broccoli</ul></div>
         </div>
         <p class="muted mt-12">🌱 Vegetarian dishes available, please note any dietary needs.</p>
@@ -332,55 +343,6 @@
     </div>
   </section>
 
-  <!-- RSVP -->
-  <section id="rsvp">
-    <div class="container">
-      <div class="card reveal" style="text-align:center;">
-        <h2 class="section-title">RSVP</h2>
-          <p>Please use the QR code on your invitation or the link below to RSVP.</p>
-        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSf_hd7aH9XyeTnvtwkff8ezNMyvF1uhehulta7Q9SPk6Qpr3g/viewform?usp=dialog">RSVP</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MATTNAT COIN -->
-  <section id="coin">
-    <div class="container">
-      <div class="card" style="text-align:center;">
-        <h2 class="section-title">MattNat Coin 🪙</h2>
-        <p class="muted">Our special wedding Coin, a digital keepsake for your crypto wallet.</p>
-        <button id="addTokenButton" class="btn">Download MattNat Coin</button>
-        <p class="muted" style="margin-top:8px;font-size:13px;">Requires MetaMask</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- JS for slideshow -->
-  <script>
-    const slides = document.querySelectorAll('.slideshow .slide');
-    let currentSlide = 0;
-
-    setInterval(() => {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }, 8000);
-  </script>
-
-  <!-- Existing MetaMask script -->
-  <script>
-    const tokenAddress="0xYOUR_TOKEN_CONTRACT_ADDRESS",tokenSymbol="MNC",tokenDecimals=18,tokenImage="https://yourwebsite.com/images/mattnatcoin.png";
-    document.getElementById('addTokenButton').addEventListener('click',async()=>{
-      if(!window.ethereum) return alert('Please install MetaMask to add MattNat Coin.');
-      try{
-        await window.ethereum.request({
-          method:'wallet_watchAsset',
-          params:{type:'ERC20',options:{address:tokenAddress,symbol:tokenSymbol,decimals:tokenDecimals,image:tokenImage}}
-        });
-      }catch(e){console.error(e);}
-    });
-  </script>
-
-  <footer>Matthew &amp; Natsumi · 2 May 2026 · Tadcaster</footer>
+  <footer>Matthew &amp; Natsumi · 13:00 · 2 May 2026 · Tadcaster</footer>
 </body>
 </html>
