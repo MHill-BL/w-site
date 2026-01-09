@@ -125,6 +125,7 @@
       <nav class="menu">
         <a href="#home">Home</a>
         <a href="#rsvp">RSVP</a>
+        <a href="#rsvp">Gifts</a>
         <a href="#story">Our Story</a>
         <a href="#menu">Menu</a>
         <a href="#schedule">Schedule</a>
@@ -148,7 +149,81 @@
       <div class="card reveal" style="text-align:center;">
         <h2 class="section-title">RSVP</h2>
           <p>Please confirm your attendance below by 31 March 2026.</p>
-        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSf_hd7aH9XyeTnvtwkff8ezNMyvF1uhehulta7Q9SPk6Qpr3g/viewform?usp=dialog">RSVP</a>
+        <!-- RSVP Button -->
+        <div style="margin: 32px 0;">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf_hd7aH9XyeTnvtwkff8ezNMyvF1uhehulta7Q9SPk6Qpr3g/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener"
+            class="btn"
+            style="
+              display: inline-block;
+              background: var(--sage);
+              color: white;
+              padding: 16px 36px;
+              border-radius: 50px;
+              font-weight: 600;
+              text-decoration: none;
+              font-size: 16px;
+              border: none;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.15)'"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'">
+            RSVP
+          </a>
+    </div>
+  </section>
+
+  <!-- GIFTS SECTION -->
+  <section id="gift" class="section">
+    <div class="container">
+      <div class="card reveal" style="text-align: center;">
+        <h2 class="section-title">Gifts</h2>
+
+        <!-- Heartfelt Message -->
+        <p style="font-size: 18px; line-height: 1.6; margin-bottom: 28px;">
+          Your love and presence at our wedding is the greatest gift we could ask for.
+        </p>
+        <p style="margin-bottom: 32px; color: var(--muted);">
+          But if you insist....... you can send a gift securely below.
+        </p>
+
+        <!-- Monzo Button -->
+        <div style="margin: 32px 0;">
+          <a
+            href="https://monzo.me/matthewhill814?h=uOSu0X"
+            target="_blank"
+            rel="noopener"
+            class="btn"
+            style="
+              display: inline-block;
+              background: var(--sage);
+              color: white;
+              padding: 16px 36px;
+              border-radius: 50px;
+              font-weight: 600;
+              text-decoration: none;
+              font-size: 16px;
+              border: none;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+              transition: all 0.3s ease;
+            "
+            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.15)'"
+            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'"
+          >
+            Send a Gift via Monzo
+          </a>
+          <p style="margin-top: 14px; font-size: 14px; color: var(--muted);">
+            ✓ No fees · ✓ Secure · ✓ Add a personal message
+          </p>
+        </div>
+
+        <!-- Optional: In-Person Note -->
+        <p style="font-size: 14px; color: var(--muted); margin-top: 32px; font-style: italic;">
+          Prefer to give in person? A card box will be available at the reception.
+        </p>
       </div>
     </div>
   </section>
@@ -321,20 +396,6 @@
             </div>
           </div>
         </div>
-
-        <!-- NOTES FOR GUESTS -->
-        <div style="max-width: 800px; margin: 30px auto 0;">
-          <div class="card" style="background: rgba(255,255,255,0.7); padding: 20px;">
-            <h4 style="color: var(--sage); margin-top: 0;">Notes for Our Guests</h4>
-            <ul style="padding-left: 20px; margin: 8px 0;">
-              <li><strong>Dress code:</strong> Smart casual (no jeans, please!)</li>
-              <li><strong>Gifts:</strong> Your presence is our present! But if you'd like, we have a <a href="#gift">wishlist</a>.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- GETTING THERE -->
   <section id="timetable">
